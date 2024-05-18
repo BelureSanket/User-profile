@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="profile.png" alt="" height="200px">
+        <h1>Belure Sanket</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section about" style="text-align: center;">
+        <h2>About Me</h2>
+        <p  >I'm a student at Methodist College Of Engineering and Technology pursuing B.E degree in computer science ans engineering. I'm intrested in Web Development and Machine Learning.</p>
+    </section>
+
+    <section id="education" class="section education">
+        <h2>Education</h2>
+        <ul>
+            
+            <li> <b>Methodist College of Engineering & Technology</b> - B.E - 2025</li><br>
+            <li> <b>Sri Gayatri Junior College</b> - MPC - 2021</li><br>
+            <li><b>Brilliant Grammar High School</b> - Class 10 - 2019</li><br>
+        </ul>
+    </section>
+
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <ul>
+            
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Java</li>
+            <li>Data structures and algorithms</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
+        <div class="filter">
+            <button onclick="filterProjects('all')">All</button>
+            <button onclick="filterProjects('web')">Web</button>
+            <button onclick="filterProjects('mobile')">Mobile</button>
+            <button onclick="filterProjects('IOT')">IOT</button>
+        </div>
+        <div class="project web">
+            <h3>Online Book Store</h3>
+            <p >An e-commerce website for buying books.</p>
+            <img src="books.png" alt="Mobile Project Image" style="height: 200px;">
+            <br>
+            <a href="https://beluresanket.github.io/Online-Book-Store/">View Project</a>
+        </div>
+        <div class="project mobile">
+            <h3>BMI Calculator</h3>
+            <p >The Body Mass Index (BMI) Calculator can be used to calculate BMI values based on height and weight. BMI is a fairly reliable indicator of body fatness for most people.</p>
+            <img src="bmi.jpg" alt="Mobile Project Image" style="height: 200px;">
+            <br>
+            <a href="">View Project</a>
+        </div>
+
+        <div class="project IOT">
+            <h3>Gesture Control Mediaplayer </h3>
+            <p >In this project, we have implemented a simple Arduino based hand gesture control where you can control few functions like play or pause a video and increase or decrease the volume (in VLC Player) with the help of hand gestures.</p>
+            <img src="gesture.jpg" alt="Mobile Project Image" style="height: 200px;">
+            <br>
+            <a href="https://github.com/BelureSanket/Gesture-Control-Mediaplayer">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <br>
+            <br>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <br>
+            <br>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <br>
+            <button type="submit">Send</button>
+        </form>
+        <div id="statusMessage"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
